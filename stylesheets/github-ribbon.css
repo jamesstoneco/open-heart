@@ -1,0 +1,39 @@
+/* line 16, ../sass/github-ribbon.scss */
+#forkongithub {
+  position: absolute;
+  display: block;
+  top: 0;
+  right: 0;
+  width: emCalc(300px);
+  overflow: hidden;
+  height: emCalc(300px);
+  z-index: 0;
+}
+
+/* line 28, ../sass/github-ribbon.scss */
+#forkongithub a {
+  width: emCalc(300px);
+  position: absolute;
+  top: emCalc(60px);
+  right: emCalc(-60px);
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+/* line 37, ../sass/github-ribbon.scss */
+#forkongithub a::before, #forkongithub a::after {
+  content: "";
+  width: 100%;
+  display: block;
+  position: absolute;
+  top: 1px;
+  left: 0;
+  height: 1px;
+  background: #fff;
+}
+
+/* line 48, ../sass/github-ribbon.scss */
+#forkongithub a::after {
+  bottom: 1px;
+  top: auto;
+}

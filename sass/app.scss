@@ -46,251 +46,12 @@
 // @import "foundation/components/tooltips";
 // @import "foundation/components/dropdown";
 
-// A modification and refactoring of the excellent 
-// responsive css-fork-on-github-ribbon by Christian Heilmann
-// specificly for use with Zurb Foundation 4 and Sass/Scss
+// app specific imports
 
-// https://github.com/manofstone
+@import "github-ribbon";
+@import "rainbow-solarized";
 
-// Software License Agreement (BSD License)
-// Copyright (c) 2013, Christian Heilmann.
-// All rights reserved.
-
-// https://github.com/codepo8/css-fork-on-github-ribbon
-
-$forkingithub-width: 300px;
-$forkingithub-offset: 60px;
-
-#forkongithub {
-  position:absolute;
-  display:block;
-  top:0;
-  right:0;
-  width: emCalc($forkingithub-width);
-  overflow:hidden;
-  height:emCalc($forkingithub-width);
-  z-index:10000;
-}
-
-#forkongithub a {
-  width:emCalc($forkingithub-width);
-  position:absolute;
-  top:emCalc($forkingithub-offset);
-  right:emCalc(-$forkingithub-offset);
-  transform:rotate(45deg);
-  -webkit-transform:rotate(45deg);
-  box-shadow:4px 4px 10px rgba(0,0,0,0.8);
-}
-
-#forkongithub a::before, #forkongithub a::after { 
-  content:"";
-  width:100%;
-  display:block;
-  position:absolute;
-  top:1px;
-  left:0;
-  height:1px;
-  background:#fff;
-}
-
-#forkongithub a::after {
-  bottom:1px;
-  top:auto;
-}
-
-// END OF RESPOSIVE GITHUB CSS
-
-#hearts-bg {
-  background-color: $secondary-color;
-}
-
-#open-heart-logo {
-  padding: emCalc(15px);
-}
-
-#hearts-callout {
-  background: lighten($secondary-color, 10%);
-}
-
-@media #{$small} { 
-
-  #first-row {
-    margin-top: $column-gutter;
-  }
-
-  #hearts-callout {
-    top: emCalc(60px);
-  }
-
-  #hearts-download {
-    top: emCalc(70px);
-  }
-
-}
-
-svg path {
-    fill: $primary-color;
-}
-
-svg fill {
-  fill: $primary-color;
-}
-
-/* object animation (hover over) */
-@keyframes hoverover
-{
-  0% { transform: scale(1); }
-  33% { transform: scale(0.8); }
-  100% { transform: scale(1); }
-}
-
-@-webkit-keyframes hoverover
-{
-  0% { -webkit-transform: scale(1); }
-  33% { -webkit-transform: scale(0.8); }
-  100% { -webkit-transform: scale(1); }
-}
-
-/* object animation (hover out) */
-@keyframes hoverout
-{
-  0% { transform: scale(1); }
-  33% { transform: scale(1.3); }
-  100% { transform: scale(1);  }
-}
-
-@-webkit-keyframes hoverout
-{
-  0% { -webkit-transform: scale(1); }
-  33% { -webkit-transform: scale(1.3);  }
-  100% { -webkit-transform: scale(1);  }
-}
-
-.bounce {
-  // transform-origin:50% 10%;
-  // -webkit-transform-origin:50% 10%;
-  animation-name: hoverover;
-  -webkit-animation-name: hoverover;
-  animation-duration: 0.7s;
-  -webkit-animation-duration: 0.7s;
-  animation-timing-function: ease-in-out;
-  -webkit-animation-timing-function: ease-in-out;
-  // height:emCalc(150px);
-  width:60%;
-  height:180px;
-  // -webkit-filter: drop-shadow( -4px 4px 10px rgba(0,0,0,0.3) );
-  // filter: drop-shadow( -4px 4px 10px rgba(0,0,0,0.3) ); 
-
-  }
-
-.bounce:hover {
-  animation-name: hoverout;
-  -webkit-animation-name: hoverout;
-  animation-duration: 0.4s;
-  -webkit-animation-duration: 0.4s;
-}
-
-
-
-// this is not working
-
-div .line-number {
-  display: hidden;
-}
-
-/**
- * Solarized Dark theme, Modified to work with Zurb Foundation 4
- *
- * Adaptation of Solarized Dark from ethanschoonover.com/solarized
- *
- * @author Ethan Schoonover
- * @author David Litmark
- * @author James Stone
- * @version 1.0.0
- */
-
-pre {
-    @include panel();
-    @include radius;
-    background-color: #002b36;
-    border-color: #002b36; // issue with borders on moz using line numbers
-
-    // -moz-border-color: #002b36;
-    // -webkit-border-color: #002b36;
-    border-style: none;
-    border-width: 0px;
-    word-wrap: normal;
-    color: #839496; /* base0 */
-    font-size: $paragraph-font-size;
-    line-height: $paragraph-line-height;
-    margin-bottom: $paragraph-margin-bottom;
-}
-
-pre .comment {
-    color: #586e75; /* base01 */
-}
-
-pre .constant {
-    color: #839496; /* base0 */
-}
-
-pre .constant.language {
-    color: #268bd2; /* blue */
-}
-
-pre .constant.regexp {
-    color: #2aa198; /* cyan */
-}
-
-pre .storage {
-    color: #268bd2; /* blue */
-}
-
-pre .string, pre .comment.docstring {
-    color: #2aa198; /* cyan */
-}
-
-pre .support.tag.script, pre .support.tag.style {
-    color: #2aa198; /* cyan */
-}
-
-pre .string.regexp {
-    color: #2aa198; /* cyan */
-}
-
-pre .string.regexp.open, pre .string.regexp.close {
-    color: #2aa198; /* cyan */
-}
-
-pre .keyword, pre .selector {
-    color: #859900; /* green */
-}
-
-pre .inherited-class {
-    font-style: italic;
-}
-
-pre .entity {
-    color: #b58900; /* yellow */
-}
-
-pre .support, *[data-language="c"] .function.call {
-    color: #859900; /* green */
-}
-
-pre .support.method {
-    color: #839496; /* base0 */
-}
-
-pre .support.property {
-    color: #839496; /* base0 */
-}
-
-pre .variable.global, pre .variable.class, pre .variable.instance {
-    color: #839496; /* base0 */
-}
-
-// hearts below
+// Added to use the open-heart library
 
 .heart { 
   width: 126px; 
@@ -298,4 +59,66 @@ pre .variable.global, pre .variable.class, pre .variable.instance {
   position: fixed; 
   background-image: url('../javascripts/open-heart/heart.png'); 
   z-index: 99999;
+}
+
+// app specific below
+
+#hearts-bg { background-color: $secondary-color; }
+
+#open-heart-logo { padding: emCalc(15px); }
+
+#hearts-callout { background: lighten($secondary-color, 10%); }
+
+@media #{$small} { 
+  #first-row { margin-top: $column-gutter; }
+  #hearts-callout { top: emCalc(60px); }
+  #hearts-download { top: emCalc(70px); }
+}
+
+// svg coloring
+svg path { fill: $primary-color; }
+// svg fill { fill: $primary-color; }
+
+// animation keyframes for .bounce images
+@keyframes hoverover
+{
+  0% { transform: scale(1); }
+  33% { transform: scale(0.8); }
+  100% { transform: scale(1); }
+}
+@-webkit-keyframes hoverover
+{
+  0% { -webkit-transform: scale(1); }
+  33% { -webkit-transform: scale(0.8); }
+  100% { -webkit-transform: scale(1); }
+}
+@keyframes hoverout
+{
+  0% { transform: scale(1); }
+  33% { transform: scale(1.3); }
+  100% { transform: scale(1);  }
+}
+@-webkit-keyframes hoverout
+{
+  0% { -webkit-transform: scale(1); }
+  33% { -webkit-transform: scale(1.3);  }
+  100% { -webkit-transform: scale(1);  }
+}
+
+// .bounce animation on hover/hoverout
+.bounce {
+  animation-name: hoverover;
+  -webkit-animation-name: hoverover;
+  animation-duration: 0.7s;
+  -webkit-animation-duration: 0.7s;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-timing-function: ease-in-out;
+  width:60%;
+  height:180px;
+  }
+.bounce:hover {
+  animation-name: hoverout;
+  -webkit-animation-name: hoverout;
+  animation-duration: 0.4s;
+  -webkit-animation-duration: 0.4s;
 }

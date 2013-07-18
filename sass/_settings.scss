@@ -46,8 +46,8 @@ $default-float: left;
 
 $primary-color: #DD5155;
 $secondary-color: #DDD;
-// $alert-color: #c60f13;
-// $success-color: #5da423;
+$alert-color: #901A1D;
+$success-color: #1A7516;
 
 // Make sure border radius matches unless we want it different.
 
@@ -1001,9 +1001,9 @@ $section-function-factor: 10%;
 // Titles
 
 $section-title-color: #333;
-$section-title-bg: #EEE;
+$section-title-bg: lighten($secondary-color, $section-function-factor/2);
 // $section-title-bg-active: darken($section-title-bg, $section-function-factor);
-$section-title-bg-active-tabs: #DDD;
+$section-title-bg-active-tabs: $secondary-color;
 $section-title-bg-hover: darken($section-title-bg, $section-function-factor*2);
 
 // Border size
