@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="252px" height="233px" viewBox="0 0 252 233" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <title>heart@2x</title>
+    <description>Created with Sketch (http://www.bohemiancoding.com/sketch)</description>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#FD585C" offset="0%"></stop>
+            <stop stop-color="#A51515" offset="100%"></stop>
+        </linearGradient>
+        <radialGradient cx="50%" cy="13.7060073%" fx="50%" fy="13.7060073%" r="142.233014%" id="radialGradient-2">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#000000" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="25.6168693%" cy="21.484375%" fx="25.6168693%" fy="21.484375%" r="79.1044056%" id="radialGradient-3">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#000000" offset="100%"></stop>
+        </radialGradient>
+        <path d="M125.996868,61.3753234 C126.343135,27.4219208 154.417548,0 189,0 C223.793941,0 252,27.7583438 252,62 C252,75.0361615 247.911798,87.1326281 240.928434,97.1152344 L241.177734,97.1152344 L239.516343,99.0531643 C238.01123,101.037298 236.388397,102.929633 234.657732,104.720491 L124.683436,233 L16.963305,104.324913 C15.1633489,102.429568 13.4828089,100.42295 11.9333095,98.3164256 L10.9277344,97.1152344 L11.0715661,97.1152344 C4.08820206,87.1326281 0,75.0361615 0,62 C0,27.7583438 28.206059,0 63,0 C97.5821112,0 125.656312,27.4213802 125.996868,61.3753234 Z M125.996868,61.3753234" id="path-4"></path>
+    </defs>
+    <g id="Page 1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <use id="Oval 1" fill="url(#linearGradient-1)" xlink:href="#path-4"></use>
+        <use id="Oval 1-1" fill="url(#radialGradient-2)" xlink:href="#path-4"></use>
+        <use id="Oval 1-2" fill="url(#radialGradient-3)" xlink:href="#path-4"></use>
+    </g>
+</svg>
